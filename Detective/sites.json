@@ -1,0 +1,624 @@
+[
+    {
+        "name": "GitHub",
+        "url": "https://github.com/{}",
+        "check_type": "message",
+        "expected_status": 200,
+        "error_msg": "Not Found"
+    },
+    {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/User:{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "Reddit",
+        "url": "https://www.reddit.com/user/{}",
+        "check_type": "message",
+        "expected_status": 200,
+        "error_msg": "Sorry, nobody on Reddit goes by that name"
+    },
+    {
+        "name": "Pinterest",
+        "url": "https://www.pinterest.com/{}/",
+        "check_type": "message",
+        "expected_status": 200,
+        "error_msg": "<title></title>",
+        "username_must_be_in_content": true
+    },
+    {
+        "name": "Patreon",
+        "url": "https://www.patreon.com/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "TikTok",
+        "url": "https://www.tiktok.com/@{}",
+        "check_type": "message",
+        "expected_status": 200,
+        "error_msg": "Couldn't find this account",
+        "username_must_be_in_content": true
+    },
+    {
+        "name": "Instagram",
+        "url": "https://www.instagram.com/{}/",
+        "probe_url": "https://www.instagram.com/api/v1/users/web_profile_info/?username={}",
+        "check_type": "status_code",
+        "expected_status": 200,
+        "headers": {
+            "X-IG-App-ID": "936619743392459",
+            "X-Requested-With": "XMLHttpRequest"
+        }
+    },
+    {
+        "name": "Twitter (X)",
+        "url": "https://twitter.com/{}",
+        "probe_url": "https://publish.twitter.com/oembed?url=https://twitter.com/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "Facebook",
+        "url": "https://www.facebook.com/{}",
+        "check_type": "message",
+        "expected_status": 200,
+        "error_msg": "This content isn't available right now",
+        "username_must_be_in_content": true
+    },
+    {
+        "name": "YouTube",
+        "url": "https://www.youtube.com/@{}",
+        "check_type": "status_code",
+        "expected_status": 200,
+        "headers": {
+            "User-Agent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+        }
+    },
+    {
+        "name": "Twitch",
+        "url": "https://www.twitch.tv/{}",
+        "check_type": "message",
+        "expected_status": 200,
+        "error_msg": "<title>Twitch</title>",
+        "username_must_be_in_content": true
+    },
+    {
+        "name": "SoundCloud",
+        "url": "https://soundcloud.com/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "Spotify",
+        "url": "https://open.spotify.com/user/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "Steam",
+        "url": "https://steamcommunity.com/id/{}",
+        "check_type": "message",
+        "expected_status": 200,
+        "error_msg": "The specified profile could not be found."
+    },
+    {
+        "name": "DeviantArt",
+        "url": "https://www.deviantart.com/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "Flickr",
+        "url": "https://www.flickr.com/people/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "Medium",
+        "url": "https://medium.com/@{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "Vimeo",
+        "url": "https://vimeo.com/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "Tumblr",
+        "url": "https://{}.tumblr.com/",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "Blogger",
+        "url": "https://{}.blogspot.com/",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "Wix",
+        "url": "https://www.wix.com/website/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "Ghost",
+        "url": "https://ghost.org/authors/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "Weebly",
+        "url": "https://{}.weebly.com/",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "LiveJournal",
+        "url": "https://{}.livejournal.com",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "Academia.edu",
+        "url": "https://independent.academia.edu/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "Scribd",
+        "url": "https://www.scribd.com/user/{}/",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "SlideShare",
+        "url": "https://www.slideshare.net/{}",
+        "check_type": "status_code",
+        "expected_status": 404
+    },
+    {
+        "name": "TripAdvisor",
+        "url": "https://www.tripadvisor.com/members/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "Disqus",
+        "url": "https://disqus.com/by/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "Slack",
+        "url": "https://{}.slack.com",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "GitLab",
+        "url": "https://gitlab.com/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "BitBucket",
+        "url": "https://bitbucket.org/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "CodePen",
+        "url": "https://codepen.io/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "Behance",
+        "url": "https://www.behance.net/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "Dribbble",
+        "url": "https://dribbble.com/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "Keybase",
+        "url": "https://keybase.io/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "Kongregate",
+        "url": "https://www.kongregate.com/accounts/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "Letterboxd",
+        "url": "https://letterboxd.com/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "Mastodon",
+        "url": "https://mastodon.social/@{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "Newgrounds",
+        "url": "https://{}.newgrounds.com",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "ProductHunt",
+        "url": "https://www.producthunt.com/@{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "Roblox",
+        "url": "https://www.roblox.com/user.aspx?username={}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "Tinder",
+        "url": "https://tinder.com/@{}",
+        "check_type": "message",
+        "expected_status": 200,
+        "error_msg": "Looking for someone?"
+    },
+    {
+        "name": "Venmo",
+        "url": "https://venmo.com/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "Wattpad",
+        "url": "https://www.wattpad.com/user/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "About.me",
+        "url": "https://about.me/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "Canva",
+        "url": "https://www.canva.com/p/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "HubSpot",
+        "url": "https://app.hubspot.com/profile/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "IFTTT",
+        "url": "https://ifttt.com/p/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "Last.fm",
+        "url": "https://www.last.fm/user/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "ReverbNation",
+        "url": "https://www.reverbnation.com/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "Bandcamp",
+        "url": "https://bandcamp.com/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "Etsy",
+        "url": "https://www.etsy.com/people/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "CashApp",
+        "url": "https://cash.app/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "Giphy",
+        "url": "https://giphy.com/channel/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "Instructables",
+        "url": "https://www.instructables.com/member/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "Foursquare",
+        "url": "https://foursquare.com/user/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "Gumroad",
+        "url": "https://gumroad.com/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "HackerNews",
+        "url": "https://news.ycombinator.com/user?id={}",
+        "check_type": "message",
+        "error_msg": "No such user",
+        "expected_status": 200
+    },
+    {
+        "name": "Houzz",
+        "url": "https://www.houzz.com/user/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "Itch.io",
+        "url": "https://{}.itch.io",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "Kickstarter",
+        "url": "https://www.kickstarter.com/profile/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "LeetCode",
+        "url": "https://leetcode.com/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "MyAnimeList",
+        "url": "https://myanimelist.net/profile/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "Pastebin",
+        "url": "https://pastebin.com/u/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "PyPI",
+        "url": "https://pypi.org/user/{}",
+        "check_type": "status_code",
+        "expected_status": 404
+    },
+    {
+        "name": "Quora",
+        "url": "https://www.quora.com/profile/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "Redbubble",
+        "url": "https://www.redbubble.com/people/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "Slack (Community)",
+        "url": "https://{}.slack.com",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "SourceForge",
+        "url": "https://sourceforge.net/u/{}/profile",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "StackOverflow",
+        "url": "https://stackoverflow.com/users/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "Trakt",
+        "url": "https://trakt.tv/users/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "Trip",
+        "url": "https://www.trip.com/travelers/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "AngelList",
+        "url": "https://angel.co/u/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "9GAG",
+        "url": "https://9gag.com/u/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "AirBit",
+        "url": "https://airbit.com/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "Asciinema",
+        "url": "https://asciinema.org/~{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "Audiojungle",
+        "url": "https://audiojungle.net/user/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "Basecamp",
+        "url": "https://{}.basecamphq.com/login",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "BookCrossing",
+        "url": "https://www.bookcrossing.com/mybookshelf/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "BuyMeACoffee",
+        "url": "https://www.buymeacoffee.com/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "BuzzFeed",
+        "url": "https://www.buzzfeed.com/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "CarbonMade",
+        "url": "https://{}.carbonmade.com",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "Championat",
+        "url": "https://www.championat.com/user/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "Chaos",
+        "url": "https://chaos.social/@{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "Clubhouse",
+        "url": "https://www.clubhouse.com/@{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "Codewars",
+        "url": "https://www.codewars.com/users/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "ColourLovers",
+        "url": "https://www.colourlovers.com/lover/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "CreativeMarket",
+        "url": "https://creativemarket.com/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "Crevado",
+        "url": "https://{}.crevado.com",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "Designspiration",
+        "url": "https://www.designspiration.com/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "Discogs",
+        "url": "https://www.discogs.com/user/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "Docker Hub",
+        "url": "https://hub.docker.com/u/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "Ello",
+        "url": "https://ello.co/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "EyeEm",
+        "url": "https://www.eyeem.com/u/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "Flipboard",
+        "url": "https://flipboard.com/@{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "Gitee",
+        "url": "https://gitee.com/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "GoodReads",
+        "url": "https://www.goodreads.com/user/show/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "Gravatar",
+        "url": "http://en.gravatar.com/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    },
+    {
+        "name": "HackerOne",
+        "url": "https://hackerone.com/{}",
+        "check_type": "status_code",
+        "expected_status": 200
+    }
+]
