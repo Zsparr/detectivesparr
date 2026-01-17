@@ -12,7 +12,7 @@ A simple Python CLI tool to check if a specific username is taken or exists acro
 1.  Open your terminal or command prompt.
 2.  Navigate to the project directory:
     ```bash
-    cd "d:/Da project"
+    cd "d:/Detective"
     ```
 3.  Install the required dependencies:
     ```bash
@@ -51,3 +51,4 @@ Each entry looks like this:
 
 - `url`: The profile URL structure. Use `{}` as a placeholder for the username.
 - `check_type`: Currently supports `status_code` (checks if the page returns 200 OK).
+
