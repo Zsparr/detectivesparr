@@ -1,0 +1,48 @@
+{
+  "api_keys": {
+    "ipinfo": "",
+    "virustotal": "",
+    "shodan": "",
+    "hunter": ""
+  },
+  "preferences": {
+    "default_export_format": "json",
+    "auto_export": false,
+    "export_directory": "exports",
+    "max_concurrent_requests": 50,
+    "request_timeout": 10,
+    "enable_metadata_extraction": true,
+    "show_not_found_sites": false,
+    "check_open_ports": false,
+    "generate_username_variations": false
+  },
+  "investigation_settings": {
+    "username_variations_count": 10,
+    "subdomain_scan_depth": "basic",
+    "port_scan_common_only": true,
+    "dns_record_types": [
+      "A",
+      "AAAA",
+      "MX",
+      "NS",
+      "TXT",
+      "CNAME"
+    ],
+    "email_header_analysis_depth": "standard",
+    "recursive_search_depth": 2,
+    "max_recursive_usernames": 20
+  },
+  "ui_settings": {
+    "color_scheme": "default",
+    "show_progress_bars": true,
+    "verbose_output": false,
+    "pause_between_checks": 0.0
+  },
+  "security": {
+    "enable_tor_support": false,
+    "tor_port": 9050,
+    "user_agent_rotation": false,
+    "rate_limiting": true,
+    "max_requests_per_minute": 60
+  }
+}

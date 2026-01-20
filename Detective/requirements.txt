@@ -1,0 +1,14 @@
+aiohttp
+colorama
+python-whois
+dnspython
+requests
+reportlab
+beautifulsoup4
+python-dateutil
+pycountry
+validators
+ipinfo
+shodan
+vt-py
+email-validator
