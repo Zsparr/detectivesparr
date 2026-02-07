@@ -88,7 +88,7 @@ A comprehensive Python CLI tool for OSINT (Open Source Intelligence) investigati
 
 1. Clone the repository:
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/Zsparr/detectivesparr/tree/main/Detective
    cd Detective
    ```
 
@@ -367,3 +367,4 @@ This project is licensed under the MIT License - see LICENSE file for details.
 ---
 
 **Detective** - Your comprehensive OSINT toolkit for digital investigations and security research.
+
